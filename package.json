@@ -23,6 +23,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
     "firebase": "^10.7.1",
     "lucide-react": "^0.294.0",
     "next": "14.0.3",
