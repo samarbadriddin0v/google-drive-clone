@@ -11,7 +11,7 @@ const Navbar = () => {
   const { userId } = auth();
 
   return (
-    <div className="h-[10vh] fixed left-0 top-0 right-0 z-30 bg-[#F6F9FC] dark:bg-[#1F1F1F]">
+    <div className="h-[10vh] fixed left-0 top-0 right-0 z-30 bg-[#F6F9FC] dark:bg-[#1F1F1F] border-b">
       <div className="flex items-center justify-between my-4 mx-6">
         <Link href={"/"}>
           <div className="flex items-center">
