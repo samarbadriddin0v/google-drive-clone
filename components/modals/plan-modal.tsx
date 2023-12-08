@@ -50,6 +50,6 @@ const planArray = [
     price: "10",
     options:
       "100 GB of storage, Access to Google experts,  Share with up to 5 others, Extra member benefits, More Google Photos editing features",
-    priceId: "price_1OL6MXInKwPAihSrovHLhWGT",
+    priceId: "price_1OK5jiL7w2jHXlsSaWtc7yQI",
   },
 ];
