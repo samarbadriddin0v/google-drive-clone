@@ -74,12 +74,6 @@ const Header = ({ label, isHome, isDocument, isDocumentPage }: HeaderProps) => {
               <LayoutPanelTop className="w-5 h-5" />
             </div>
           )}
-          <div
-            role="button"
-            className="p-2 hover:bg-secondary rounded-full transition"
-          >
-            <Info className="w-5 h-5" />
-          </div>
         </div>
       )}
     </div>

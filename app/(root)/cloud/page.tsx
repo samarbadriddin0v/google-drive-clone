@@ -33,12 +33,14 @@ const ClouPage = async () => {
 
   const files = await getData(userId!);
 
+  console.log(files);
+
   const totalSize = files.reduce((acc, file) => acc + file.size, 0);
 
   return (
     <>
       <Header label="Storage" />
-      <Storage totalSize={totalSize} />
+      <Storage totalSize={JSON.parse(JSON.stringify(totalSize))} />
 
       <Table className="mt-4">
         <TableHeader>
@@ -52,7 +54,10 @@ const ClouPage = async () => {
         </TableHeader>
         <TableBody>
           {files.map((folder) => (
-            <ListItem key={folder.id} item={folder} />
+            <ListItem
+              key={folder.id}
+              item={JSON.parse(JSON.stringify(folder))}
+            />
           ))}
         </TableBody>
       </Table>

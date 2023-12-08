@@ -2,19 +2,24 @@
 
 import React from "react";
 import { Button } from "../ui/button";
-import { Clock5, Cloud, Plus, Star, Tablet, Trash } from "lucide-react";
+import { Clock5, Cloud, Loader, Plus, Star, Tablet, Trash } from "lucide-react";
 import Link from "next/link";
 import Item from "./item";
 import { Progress } from "../ui/progress";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import PopoverActions from "./popover-actions";
 import { usePlan } from "@/hooks/use-plan";
+import { useSubscription } from "@/hooks/use-subscribtion";
+import { byteConverter } from "@/lib/utils";
 
 const Sidebar = () => {
   const { onOpen } = usePlan();
+  const { subscription, isLoading, totalStorage } = useSubscription();
+
+  const totalValue = subscription === "Basic" ? 15_000_000 : 15_000_000_0;
 
   return (
-    <div className="h-[90vh] w-72 fixed top-[10vh] left-0 z-30 bg-[#F6F9FC] dark:bg-[#1f1f1f]">
+    <div className="h-[90vh] w-60 fixed top-[10vh] left-0 z-30 bg-[#F6F9FC] dark:bg-[#1f1f1f]">
       <div className="flex flex-col p-3">
         <Popover>
           <PopoverTrigger asChild>
@@ -36,8 +41,19 @@ const Sidebar = () => {
           ))}
 
           <div className="flex flex-col space-y-2 mx-4">
-            <Progress className="h-2" value={30} />
-            <span>20 MB of 1.5 GB used</span>
+            {isLoading ? (
+              <div className="w-full flex justify-center">
+                <Loader className="animate-spin text-muted-foreground w-4 h-4" />
+              </div>
+            ) : (
+              <>
+                <Progress className="h-2" value={totalStorage / totalValue} />
+                <span>
+                  {byteConverter(totalStorage, 1)} of{" "}
+                  {subscription === "Basic" ? "1.5 GB" : "15 GB"} used
+                </span>
+              </>
+            )}
 
             <Button
               className="rounded-full"

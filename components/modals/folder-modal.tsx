@@ -45,6 +45,7 @@ const FolderModal = () => {
       timestamp: serverTimestamp(),
       uid: user?.id,
       isArchive: false,
+      isDocument: false,
     }).then(() => {
       form.reset();
       onClose();

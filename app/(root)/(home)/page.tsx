@@ -10,7 +10,8 @@ const getData = async (uid: string, type: "files" | "folders") => {
   const q = query(
     collection(db, type),
     where("uid", "==", uid),
-    where("isArchive", "==", false)
+    where("isArchive", "==", false),
+    where("isDocument", "==", false)
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
