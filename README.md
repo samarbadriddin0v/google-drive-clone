@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="title">NextJS Firebase Stripe Clerk - Google Drive Clone Project</h1>
 
-## Getting Started
+<p align="center"><img src="https://media.graphassets.com/u1mIG68sT6Gz79zhMurn" alt="project-image"></p>
 
-First, run the development server:
+<p id="description">Embark on an exciting journey of building a Google Drive clone with the Next.js framework Firebase for backend functionality Stripe for payment integration and Clerk for authentication. This comprehensive course is designed for web developers eager to enhance their skills by creating a feature-rich cloud storage application that mirrors the functionality of Google Drive.</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<h2>🚀 Demo</h2>
+
+[https://drive.sammi.app](https://drive.sammi.app)
+
+<h2>🧐 Features</h2>
+
+Here're some of the project's best features:
+
+- Stripe Integration
+- Clerk Authentication
+- Firebase Backend
+- Light and Dark mode 🌓
+- List rename delete drag & drop reorder and copy
+- Stripe subscription for each organization to unlock unlimited boards
+- Zustand state management
+- Detail-oriented effects and animations using TailwindCSS
+- Environment Typescript NextJS Setup
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Install packages</p>
+
+```
+npm install & yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>2. Setup .env file</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_STRIPE_SECRET_KEY=
+NEXT_PUBLIC_DOMAIN=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>3. Start the app</p>
 
-## Learn More
+```
+npm run dev & yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+<h2>💻 Built with</h2>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Technologies used in the project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ReactJS
+- NextJS app routes
+- NodeJS
+- TailwindCSS
+- ShadcnUI
+- Clerk
+- Stripe
+- TypeScript
