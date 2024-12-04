@@ -10,7 +10,7 @@ import {
 	TableRow,
 } from '@/components/ui/table'
 import { db } from '@/lib/firebase'
-import { auth } from '@clerk/nextjs'
+import { currentUser } from '@clerk/nextjs/server'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import React from 'react'
 
@@ -31,9 +31,9 @@ const getData = async (uid: string, type: 'files' | 'folders') => {
 }
 
 const StarredPage = async () => {
-	const { userId } = auth()
-	const folders = await getData(userId!, 'folders')
-	const files = await getData(userId!, 'files')
+	const user = await currentUser()
+	const folders = await getData(user?.id!, 'folders')
+	const files = await getData(user?.id!, 'files')
 
 	return (
 		<>

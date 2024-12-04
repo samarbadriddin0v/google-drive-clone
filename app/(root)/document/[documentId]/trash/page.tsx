@@ -11,6 +11,7 @@ import {
 import { db } from '@/lib/firebase'
 import { DocIdProps } from '@/types'
 import { auth } from '@clerk/nextjs'
+import { currentUser } from '@clerk/nextjs/server'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import React from 'react'
 
@@ -30,8 +31,8 @@ const getFiles = async (folderId: string, uid: string) => {
 }
 
 const DocumentTrashPage = async ({ params }: DocIdProps) => {
-	const { userId } = auth()
-	const files = await getFiles(params.documentId, userId!)
+	const user = await currentUser()
+	const files = await getFiles(params.documentId, user?.id!)
 
 	return (
 		<>
