@@ -41,11 +41,7 @@ const Sidebar = () => {
 					))}
 
 					<div className='flex flex-col space-y-2 mx-4'>
-						{isLoading ? (
-							<div className='w-full flex justify-center'>
-								<Loader className='animate-spin text-muted-foreground w-4 h-4' />
-							</div>
-						) : (
+						{isLoading ? null : (
 							<>
 								<Progress className='h-2' value={totalStorage / totalValue} />
 								<span>
