@@ -1,4 +1,5 @@
-import { auth } from '@clerk/nextjs'
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -6,9 +7,10 @@ import { ModeToggle } from './mode-toggle'
 import { Settings } from 'lucide-react'
 import UserBox from './user-box'
 import { Avatar, AvatarFallback } from '../ui/avatar'
+import { useAuth, useUser } from '@clerk/nextjs'
 
 const Navbar = () => {
-	const { userId } = auth()
+	const { userId } = useAuth()
 
 	return (
 		<div className='h-[10vh] fixed left-0 top-0 right-0 z-30 bg-[#F6F9FC] dark:bg-[#1F1F1F]'>

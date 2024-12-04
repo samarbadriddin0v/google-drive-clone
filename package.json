@@ -9,8 +9,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@clerk/nextjs": "^4.29.12",
-		"@clerk/themes": "^1.7.19",
+		"@clerk/nextjs": "^6.6.0",
+		"@clerk/themes": "^2.1.50",
 		"@hookform/resolvers": "^3.3.2",
 		"@radix-ui/react-alert-dialog": "^1.0.5",
 		"@radix-ui/react-avatar": "^1.0.4",
