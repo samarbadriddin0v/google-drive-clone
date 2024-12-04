@@ -3,7 +3,7 @@ import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-	apiKey: 'AIzaSyDwFXxIwQIgBHg4pp7fquOGo9542wUmy1g',
+	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
 	authDomain: 'drive-clone-9b26e.firebaseapp.com',
 	projectId: 'drive-clone-9b26e',
 	storageBucket: 'drive-clone-9b26e.firebasestorage.app',
