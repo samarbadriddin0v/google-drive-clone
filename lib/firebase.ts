@@ -1,19 +1,19 @@
-import { getApp, getApps, initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getApp, getApps, initializeApp } from 'firebase/app'
+import { getFirestore } from 'firebase/firestore'
+import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: "drive-b3808.firebaseapp.com",
-  projectId: "drive-b3808",
-  storageBucket: "drive-b3808.appspot.com",
-  messagingSenderId: "81678356040",
-  appId: "1:81678356040:web:17ad6998200104ea22127d",
-};
+	apiKey: 'AIzaSyDwFXxIwQIgBHg4pp7fquOGo9542wUmy1g',
+	authDomain: 'drive-clone-9b26e.firebaseapp.com',
+	projectId: 'drive-clone-9b26e',
+	storageBucket: 'drive-clone-9b26e.firebasestorage.app',
+	messagingSenderId: '883644913402',
+	appId: '1:883644913402:web:4b27146bab79c3816e9b43',
+}
 
-!getApps().length ? initializeApp(firebaseConfig) : getApp();
+!getApps().length ? initializeApp(firebaseConfig) : getApp()
 
-const db = getFirestore();
-const storage = getStorage();
+const db = getFirestore()
+const storage = getStorage()
 
-export { db, storage };
+export { db, storage }
