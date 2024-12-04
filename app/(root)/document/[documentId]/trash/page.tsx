@@ -10,7 +10,6 @@ import {
 } from '@/components/ui/table'
 import { db } from '@/lib/firebase'
 import { DocIdProps } from '@/types'
-import { auth } from '@clerk/nextjs'
 import { currentUser } from '@clerk/nextjs/server'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import React from 'react'
