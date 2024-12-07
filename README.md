@@ -6,7 +6,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://drive.sammi.app](https://drive.sammi.app)
+[https://drive.sammi.ac](https://drive.sammi.ac)
 
 <h2>🧐 Features</h2>
 
